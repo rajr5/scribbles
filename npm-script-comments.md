@@ -17,7 +17,7 @@ To check what scripts we can run in terminal we can type `npm run` (if you're us
 ```
 
 To check the available scripts we can run `npm run` in our shell, and we get the list of all available scripts:
-```
+```sh
 Lifecycle scripts included in npm-script-tips:
   test
     echo "Error: no test specified" && exit 1
@@ -30,7 +30,7 @@ available via `npm run-script`:
 ## Solution 1: Attempting comments with // prefixes
 
 To add a comment you can add fake a npm script entry like the following:
-```
+```json
 {
     "name": "npm-script-tips",
     "version": "0.0.2",
@@ -44,7 +44,7 @@ To add a comment you can add fake a npm script entry like the following:
 ```
 
 The output after `npm run` is now a bit better:
-```
+```sh
 Lifecycle scripts included in npm-script-tips:
   test
     echo "Error: no test specified" && exit 1
@@ -88,7 +88,7 @@ What I believe this translates to and why it works is that when we run `npm run`
 The first line is treated like a comment and won't be evaluated, the second line is properly executed.
 
 The output looks great with this trick:
-```
+```sh
 Lifecycle scripts included in npm-script-tips:
   test
     # This will run the tests
